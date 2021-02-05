@@ -58,7 +58,7 @@ h1 {
     margin-bottom: 0%; }
 
 h4 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: normal;
     margin-top: 2px; }
 
@@ -176,7 +176,7 @@ input[type=submit] {
 .recherche>p { 
     font-size: 1em;
     margin-top: 20px;
-    margin-left: 5px; }
+    margin-left: 3px; }
 
 .recherche>p>i {
     margin-right: 10px;
@@ -189,16 +189,46 @@ input[type=submit] {
 
 
 /* SECTION ID HEBERGEMENT/ */
-#hebergements img {
-    width: 150px;
-    height: 80px; }
-
 #hebergements {
-    width: 65%;
+    width: 60%;
     background-color: #F2F2F2;
     border-radius: 2%;
     display: flex;
-    flex-wrap: wrap; }
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 5%; }
+
+#hebergements a {
+    display: flex;
+    width: 146px;
+    height: 145px;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 5%;
+    margin-bottom: 5%;  }
+
+#hebergements img {
+    width: 140px;
+    height: 75px;
+    border-radius: 5% 5% 0 0;
+    margin-bottom: 2px; 
+    margin: 3px 2px 0 3px}
+
+h3 {
+    font-size: 0.8em;
+    margin-top: 0;
+    padding-left: 3% }
+
+#hebergements p { 
+    font-size: 0.7em;
+    margin-top: 0; 
+    padding-left: 3%; }
+
+
+
+
+
 
 
 
