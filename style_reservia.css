@@ -170,9 +170,10 @@ input[type=submit] {
 
 /* SECTION ID HEBERGEMENT/ */
 #hebergements {
-    width: 60%; height:auto;
+    width: 60%; height: 25%;
+    min-width: 600px; min-height: 400px;
     background-color: #F2F2F2;
-    border-radius: 2%;
+    border-radius: 15px;
     padding-top: 3px;
     display: flex; flex-direction: row;
     justify-content: space-around; 
@@ -180,26 +181,24 @@ input[type=submit] {
     flex-wrap: wrap; 
     line-height: 0.2em; }
 
-h2 {
+#hebergements h2 {
     font-size: 1.2em;
     display: flex;
-    padding-right: 56%; /*not sure ! calage très artificiel*/ 
+    padding-right: 63%; /*not sure ! calage très artificiel*/ 
     padding-top : 10px;
     padding-bottom: 10px;}
 
 #hebergements a {
     width: 30%; height: 25%;
-    min-width: 146px; min-height: 140px ;
-    max-width: 200px; max-height: 194px  ;
+    min-width: 120px; min-height: 110px ;
     background-color: white;
-    border-radius: 5%;
-    margin-bottom: 5%; 
-    text-align: start; }
+    box-shadow: 1px 1px 1px 1px rgb(218, 218, 218);
+    border-radius: 15px;
+    margin-bottom: 5%; }
 
 #hebergements a img {
     max-width: 97%; max-height: auto; 
-    min-width: 144px; 
-    border-radius: 5% 5% 0 0; 
+    border-radius: 15px 15px 0 0; 
     padding: 2px 2px 10px 2px; }
 
 #hebergements h3 {
@@ -214,8 +213,8 @@ h2 {
     font-size: 0.9em; font-weight: bold;
     display: flex; flex-direction: row;
     align-self: flex-end;
-    padding-right: 80%; /*not sure ! calage très artificiel*/
-    padding-bottom: 15px }
+    padding-right: 83%; /*not sure ! calage très artificiel*/
+    padding-bottom: 20px }
 
 #hebergements i {
     color:#0065FC; }
@@ -223,8 +222,65 @@ h2 {
 #aub_cannebiere i:last-child, #hot_mouettes i:last-child, #aub_panier i:last-child { 
     color: #F2F2F2; }
 
-#hot_mer i:nth-child(4,5) { /*ne fonctionne pas*/
+#hot_mer i:nth-child(4) { 
+    color: #F2F2F2; }
+
+#hot_mer i:nth-child(5) { 
     color: #F2F2F2; }
 
 /* fin SECTION ID HEBERGEMENT/ */
 
+/* ASIDE/ */
+aside {
+    float: right;
+    width: 30%; height: 25%;
+    min-height: 400px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    padding-top: 3px;
+    display: flex; 
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap; }
+
+aside h2 {
+    font-size: 1.2em; 
+    padding-top : 10px;
+    padding-bottom: 10px; }
+
+aside i { /*à placer à droite*/
+    color:#0065FC; }
+
+aside a {
+    width: auto; height: auto;
+    max-width: 88%; min-height: 100px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(218, 218, 218);
+    border-radius: 15px;
+    margin-bottom: 11%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; }
+
+aside a img {
+    float : left;
+    max-width: 45%;  
+    min-height: 93%;
+    border-radius: 15px 0 0 15px;
+    padding : 3px 15px 3px 3px; }
+
+aside h3 {
+    font-size: 0.8em; }
+    
+aside p { 
+    font-size: 0.7em;
+    padding-bottom: 1% }
+
+/*icone et interligne a finir*/      
+
+    
+/* #aub_cannebiere i:last-child, #hot_mouettes i:last-child, #aub_panier i:last-child { 
+    color: #F2F2F2; }
+    
+#hot_mer i:nth-child(4,5) { /*ne fonctionne pas*/
+  
