@@ -1,0 +1,210 @@
+figure { /*MISE EN FORME APPLIQUéE A TOUTES LES FIGURES DE LA PAGE*/
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgb(218, 218, 218);
+    border-radius: 15px;
+}
+
+
+/* SECTION LOGEMENTS N°2/ */
+#tous_logements {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#hebergements {
+    width: 65%; 
+    height: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    background-color: #F2F2F2;
+    border-radius: 15px; 
+}
+
+.hebergements>div:first-child { /*h3 hébergements à Marseille*/
+    font-size: 1.2em; 
+    padding-left: 5%;
+}
+
+.cartes_heb {
+    width: 100%;
+    height: auto;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.cartes_heb figure {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    height: 45%;
+    padding: 3px 3px 0 3px;
+}
+
+.cartes_heb img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 60%;
+}
+
+.cartes_heb figcaption {
+    text-align: left;
+    padding-left: 10px;
+    line-height: 1;
+}
+
+.cartes_heb h4 {
+    font-size: 1em; 
+    font-weight: bold;
+}
+
+.cartes_heb i {
+    color:#0065FC; 
+}
+
+#aub_cannebiere i:last-child, #hot_mouettes i:last-child, #aub_panier i:last-child { 
+    color: #F2F2F2; 
+}
+
+#hot_mer i:nth-child(4) { 
+    color: #F2F2F2; 
+}
+
+#hot_mer i:nth-child(5) { 
+    color: #F2F2F2; 
+}
+
+.hebergements>div:last-child {
+    font-size: 0.9em; 
+    font-weight: bold;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+/* fin SECTION ID HEBERGEMENT/ */
+
+/* ASIDE/ */
+aside {
+    width: 32%; height: 100%;
+    max-height: 600px;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+    display: flex; 
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+aside h3 {
+    font-size: 1.2em; 
+    padding-top : 10px;
+    padding-bottom: 10px; 
+}
+
+aside > div:first-child {
+    position: relative;
+    width: 100%;
+}  
+    
+aside > div .fa-chart-line {
+    position: absolute;
+    top: 25px; 
+    right: 20px;
+    font-size: 1.5em;
+}
+
+aside a {
+    width: auto; height: auto;
+    max-width: 98%; min-height: 100px;
+    display: flex;
+    flex-direction: row; 
+}
+
+aside a img {
+    float : left;
+    max-width: 45%;  
+    min-height: 93%;
+    border-radius: 15px 0 0 15px;
+    padding : 3px 15px 3px 3px; 
+}
+
+aside h4 {
+    font-size: 0.8em;
+    padding-bottom: 0;
+    line-height: 1.3em; 
+}
+    
+aside p { 
+    font-size: 0.7em;
+    padding-bottom: 1%; 
+}
+
+aside .fa-star { 
+    color:#0065FC; 
+    padding-top: 10px;
+    padding-bottom: 0; 
+}
+
+
+
+/*icone et interligne a finir*/      
+
+    
+/* #aub_cannebiere i:last-child, #hot_mouettes i:last-child, #aub_panier i:last-child { 
+    color: #F2F2F2; }
+    
+
+  /*Section activités*/
+
+#activites {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartes_act {
+    width: 100%;
+    height: 90%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column1 {
+    width: 20%;
+    height: 100%;
+}
+
+.column2 {
+    width: 20%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column3 {
+    width: 20%;
+    height: 100%;
+}
+
+.column3 {
+    width: 20%;
+    height: 100%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartes_act > img {
+    width: 100%;
+    height: 100%;
+}
