@@ -3,6 +3,7 @@
         
         <head>
             <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width">
             <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="style_reservia.css"/>
@@ -18,18 +19,19 @@
                         <img src="images/logo/Reservia@3x.png" alt="logo Reservia">
                     </div>
 
-                    <nav>
-                        <ul>
-                            <li><a href="#hebergements"><span class="overline">Hébergements</span></a></li> <!--renvoie vers les hébergements de quelle ville ?-->
-                            <li><a href="#activites">Activités</a></li> <!--idem ?-->
-                        </ul> 
-                    </nav>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#hebergements"><span class="overline">Hébergements</span></a></li> <!--renvoie vers les hébergements de quelle ville ?-->
+                                <li><a href="#activites">Activités</a></li> <!--idem ?-->
+                            </ul> 
+                        </nav>
 
-                    <div class="inscription"><a href="#">S'inscrire</a></div>
+                        <div class="inscription"><a href="#">S'inscrire</a></div>
+                    </div>
 
                 </header>
             
-                <main>
                     <div class=recherche> <!-- "Recherche" CHAMP + FILTRE + Nb RESULTATS-->
                         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                         <h2>En plein centre ville ou en pleine nature</h2>
@@ -44,11 +46,11 @@
                         </div>
 
                         <div id="filtres">
-                            <div id=intitulé>Filtres</div>
+                            <div id=title>Filtres</div>
                             <div id="economique"><i class="fas fa-money-bill-wave"></i>Economique</div> 
                             <div id="familial"><i class="fas fa-child"></i>Familial</div> 
                             <div id="romantique"><i class="fas fa-heart"></i>Romantique</div> 
-                            <div id="animaux_autorisés"><i class="fas fa-dog"></i>Animaux autorisés</div> 
+                            <div id="animaux"><i class="fas fa-dog"></i>Animaux autorisés</div> 
                         </div>
             
                             <p><i class="fas fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -282,7 +284,7 @@
                             <div class="column4">
                                 <div class="garde">
                                     <a href="">
-                                        <figure >
+                                        <figure>
                                             <img src="images/nd_garde.jpg" alt="Notre-Dame-de-la-Garde">
                                             <figcaption>
                                                 <h4>Notre-Dame-de-la-Garde</h4>
@@ -305,7 +307,6 @@
                             </div>
                         </div>    
                     </section> <!--fermeture Activités-->
-                </main>
             
                 <footer>
                     <div class="a_propos"><h5>A propos</h5>

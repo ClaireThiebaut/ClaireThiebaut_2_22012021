@@ -2,23 +2,17 @@
     font-family: 'Raleway', sans-serif; 
 }
 
+/* @media all and (min-width: 1025px) and (max-width: 1600px) {  */
+
+    body {
+        width: 100%;
+    }
 #bloc_page {
     font-family: 'raleway', sans-serif;
-    width: 900px;
+    width: 90%;
     font-size: 0.8em;
-    margin:auto; 
+    margin: auto; 
 }
-
-/* MEDIAS QUERIES */
-@medias all and (max-width: 575.98px)
-{
-    #bloc_page 
-    {
-        width:auto;
-    }
-}
-
-
 
 a {
     text-decoration: none;
@@ -29,22 +23,23 @@ a {
 
 /* HEADER*/
 header {
+    width: 100%;
     display: flex;
     flex-direction: row; 
+    position: relative;
 }
 
-@medias all and (max-width: 575.98px) 
-{
-    header {
-        display: block;
-    }
-} 
-
 #logo img {
-    width: 30%;
+    width: 100px;
     height: auto;
     justify-content: flex-start;
     margin-top: 10px; 
+}
+
+.menu {
+    position: absolute;
+    right: 50px;
+    display: flex;
 }
 
 nav {
@@ -85,17 +80,18 @@ li span {
 }
 
 h1 {
-    font-size: 1rem;
+    font-size: 2em;
     font-weight: bold;
     margin-bottom: 0; 
 }
 
 h2 {
-    font-size: 0.9rem;
+    font-size: 1.5em;
     font-weight: normal;
 }
 
 #champ {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start; 
@@ -110,7 +106,7 @@ h2 {
 }
 
 input[type=search] {
-    width: 250px;
+    width: 300px;
     height: 36px;
     padding: 8px 8px 8px 8px;
     border-right: white;
@@ -118,7 +114,7 @@ input[type=search] {
 }
 
 input[type=submit] {
-    width: 120px;
+    width: 90px;
     height: 36px;
     padding: 8px 8px 8px 8px;
     background-color: #0065FC;
@@ -129,13 +125,14 @@ input[type=submit] {
 }
 
 #filtres {
+    width: 700px;
     margin-top: 2%;
     display: flex;
     flex-direction: row; 
     align-items: center;
 }
 
-#intitulé {
+#title {
     font-weight: bold;
 }
 
@@ -176,17 +173,17 @@ input[type=submit] {
 #romantique:hover {
     background-color: #DEEBFF; color: #0065FC; }
 
-#animaux_autorisés {
+#animaux {
     font-weight: bold;
     margin-right: 15px; 
     width: 165px;
     border: solid #F2F2F2;
     border-radius: 28px;  }
         
-#animaux_autorisés:hover {
+#animaux:hover {
     background-color: #DEEBFF; color: #0065FC; }
 
-.recherche p { 
+.recherche p { /* PARAGRAPHE : plus de 500 logements ..... */
     font-size: 0.9rem;
     margin-top: 20px; margin-left: 3px;
     display: flex;
@@ -204,14 +201,12 @@ input[type=submit] {
 /* Fin CLASS RECHERCHE */
 
 /* Mise en forme générique 
-
 h3 : 1rem
 h4 : 0.8rem
 bleu foncé : #0065FC 
 bleu clair: #DEEBFF
-gris : #F2F2F2
+gris : #F2F2F2*/
 
-*/
 figure {
     box-shadow: 3px 3px 5px rgb(218, 218, 218);
     border-radius: 15px;
@@ -227,7 +222,7 @@ h3 {
 /* --------------------------------------------------------------------*/
 
 #tous_logements {
-    width: 900px;
+    width: 100%;
     height: auto;
     min-width: 500px;
     display: flex;
@@ -237,6 +232,7 @@ h3 {
 
 #hebergements {
    width: 65%;
+   max-width: 950px;
    height: 100%;
    background-color: #f2f2f2;
    border-radius: 15px;
@@ -255,7 +251,7 @@ h3 {
 
 /* Mise en forme de chaque carte : une DIV > FIGURE > IMG > FIGCAPTION > titre + p + 5 icons star  */
 .chambre {
-    max-width: 11rem;
+    max-width: 30%;
     height: auto; 
 }
 
@@ -270,6 +266,7 @@ h3 {
 
 .chambre img {
     width: 100%;
+    max-height: 128px;
     height: auto;
     border-radius: 15px 15px 0 0;
     object-fit: cover;
@@ -279,30 +276,29 @@ h3 {
     padding-left: 0.5rem;
     text-align: left;
     line-height: 0.2rem;
-    
 }
 
 .chambre h4 {
-    font-size: 0.8rem;
+    font-size: 1em;
     font-weight: bold;
     padding-bottom: 0;
 }
 
 .chambre p {
-    font-size: 0.8rem;
+    font-size: 0.9em;
 }
 
 .chambre i {
     color:#0065FC;
-    font-size: 0.7rem;
+    font-size: 0.9em;
 }
 
 .mer i:nth-child(4) {
-    color: white;
+    color: #f2f2f2;
 }
 
 .cannebiere i:nth-child(5), .mouettes i:nth-child(5), .mer i:nth-child(5), .panier i:nth-child(5) {
-    color:white
+    color:#f2f2f2;
 }
 /* Fin cartes HOTEL*/
 
@@ -345,28 +341,35 @@ aside > div .fa-chart-line {
 
 /* Mise en forme de chaque carte : une DIV > FIGURE > IMG > FIGCAPTION > titre + p + 5 icons star*/
 .pop_cards {
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content : space-between;
     align-items: center;
 }
 
+aside a {
+    width: 100%;
+}
+
 aside figure {
     background-color: white;
     width: 90%;
     height: 7rem;
-    margin: 0 0 2em 0.5rem;
+    margin: 0 0 2em 0.5em;
     display: flex;
     flex-direction: row; 
 }
 
 aside a img {
-    float : left;
-    max-width: 45%;  
+    display: flex;
+    justify-content:flex-start;
+    width: 148px;  
     min-height: 93%;
     border-radius: 15px 0 0 15px;
     padding : 3px 15px 3px 3px; 
 }
+
 aside figcaption {
     line-height: 0.8rem;
 }
@@ -390,6 +393,11 @@ aside .fa-star {
     padding-top: 10px;
     padding-bottom: 0; 
 }
+
+.coeur_eau i:nth-child(5), .bleu_blanc i:nth-child(5) {
+    color: #f2f2f2;
+}
+
 /* Fin cartes pop */
 /* ------------------------------------Fin Section HERBEGEMENTS -------------------------------------------- */
 
@@ -397,7 +405,7 @@ aside .fa-star {
 /* SECTION ACTIVITES*/
 
 #activity {
-    width: 900px;
+    width: 100%;
     height: 32%;
     display: flex;
     flex-direction: column;
@@ -408,7 +416,7 @@ aside .fa-star {
 Chq colonne est une DIV organisée avec flexbox pour les colonnes avec 2 cartes */
 .activity_cards {
     width: 100%;
-    height: 100%;
+    height: 450px;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -434,10 +442,10 @@ Chq colonne est une DIV organisée avec flexbox pour les colonnes avec 2 cartes 
 
 .column1 {
     width: 23%;
-    height: 100%;
-    max-height: 18rem;
-    block-size: bord
+    height: 280px;
+    /* max-height: 18rem;*/
 }
+
 
 .column2 {
     width: 23%;
@@ -450,10 +458,10 @@ Chq colonne est une DIV organisée avec flexbox pour les colonnes avec 2 cartes 
 
 .column3 {
     width: 23%;
-    height: 100%;
-    max-height: 18rem;
-    flex: grow 1;
+    height: 280px;
+    /* max-height: 18rem; */
 }
+    
 
 .column4 {
     width: 23%;
@@ -468,6 +476,9 @@ Chq colonne est une DIV organisée avec flexbox pour les colonnes avec 2 cartes 
 
 /*footer*/
 footer {
+    width: 100%;
+    height: auto;
+    margin: 50px 0 0 0; 
     display: flex; 
     flex-direction: row;
     justify-content: space-around;
@@ -479,3 +490,202 @@ footer h5 {
     font-size: 0.8rem;
     font-weight: bold;
 }
+
+/* } fermeture acolade @media queries min-width 1024 et maw-width 1600px. 
+Ouverture avant block-page principale) */ 
+
+
+/*_______________________________________________________________________________________________________*/
+
+/* -------------------------------RESPONSIVE écran < 767px - smartphones- -----------------------------*/
+/* ______________________________________________________________________________________________________*/
+
+
+@media all and (max-width: 767px) {
+
+    body {
+        width: 100%;
+        margin: 5px;
+    }
+
+    #bloc_page {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* h1, h2, h3 {
+        margin-left: 5px;
+    } */
+/* --------------------------- header---------------------------------*/
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    #logo img {
+        width: 60px;
+        height: auto;
+        justify-content: space-between;
+    }
+    
+    .menu {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    .inscription {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        color: #0065fc; 
+    }
+        
+    nav {
+        display: flex;
+        width: 100%;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav li {
+       border-bottom: 3px solid #FEFEFE; 
+    }
+    
+    li span { 
+        border-bottom: 3px solid #0065fc; 
+        border-top: none;
+    }
+
+    input[type=search] { /* à traiter*/
+        width: 250px;
+        height: 36px;
+        padding: 8px 8px 8px 8px;
+        border-right: white;
+        border: solid 2px #F2F2F2; 
+    }
+    
+    input[type=submit] { /* à traiter */
+        width: 26%;
+        height: 36px;
+        padding: 8px 8px 8px 8px;
+        background-color: #0065FC;
+        border: none;
+        border-radius: 0 10px 10px 0;
+        font-weight: bold;
+        color: white; 
+    }
+
+    
+    /* ---------------------------DIV Recherche---------------------------------*/
+
+    #filtres {
+        display: inline; 
+    }
+
+    #title {
+        margin : 10px 0 10px 20px;
+    }
+
+    #economique, #familial, #romantique, #animaux {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .recherche p {
+        margin-left : 20px;
+    }
+
+
+
+    /* -------------- SECTION TOUS LOGEMENTS (x6 Hébergements + aside populaires) -----------*/
+
+
+    #tous_logements {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    /* --------------------------- 1/ HEBERGEMENTS à MARSEILLE ---------------------------------*/
+    /* Passe SOUS le aside, qui monte en 1er sous les filtres*
+    Se positionne en colonnes, photos en paysage et figcaption dessous */
+
+    #hebergements {
+        order: 2;
+        width: 100%;
+        height: auto;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .hotel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    .chambre {
+        width: 100%;
+        min-width: 500px;
+    }
+
+    /* #hebergements h3 {
+        margin: 10px;
+    } */
+
+   /* --------------------------- 2/ ASIDE POPULAIRE ---------------------------------*/
+    /* monte au dessus des 6 hébergements classiques
+    garde sa mise en forme photo justifiée à gauche, figcpation à droite*/
+
+    aside {
+        order: 1;
+        width: 100%;
+    }
+
+    aside figure {
+        width: 90%;
+    }
+
+    /* --------------------------- 1/ ACTIVITES ---------------------------------*/
+    /* Se positionne en colonnes, photos en paysage et figcaption dessous */
+
+    .activity_cards {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+        width: 100%;
+        height: auto; 
+    } 
+
+
+
+
+ /* ---------------------------------- FOOTER --------------------------------------*/
+
+    footer {
+        width: 90%;
+        height: auto;
+        margin-top: 50px;
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-left: 15px;
+        background-color: #F2F2F2;
+        line-height: 10px;
+    }
+
+
+
+} /* fermeture acolade MQ > 768px */
