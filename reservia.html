@@ -3,23 +3,23 @@
         
         <head>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="style_reservia.css"/>
-            <title>Reservia</title>
+            <link rel="stylesheet" href="Activity_reservia.css"/>
             <script src="https://kit.fontawesome.com/56cdae3e67.js" crossorigin="anonymous"></script>
         </head>
 
         <body>
-            <div id="bloc_page">
+            <div id="block_page">
 
                 <header> <!--contient 2 div : logo + nav ht dr + div s'inscrire-->
                     <div id="logo">
                         <img src="images/logo/Reservia@3x.png" alt="logo Reservia">
                     </div>
 
-                    <div class="menu">
+                    <div class="navbar">
                         <nav>
                             <ul>
                                 <li><a href="#hebergements"><span class="overline">Hébergements</span></a></li> <!--renvoie vers les hébergements de quelle ville ?-->
@@ -27,25 +27,31 @@
                             </ul> 
                         </nav>
 
-                        <div class="inscription"><a href="#">S'inscrire</a></div>
+                        <div class="sign_in"><a href="#">S'inscrire</a></div>
                     </div>
 
                 </header>
             
-                    <div class=recherche> <!-- "Recherche" CHAMP + FILTRE + Nb RESULTATS-->
+                    <div class=search_area> <!-- "Recherche" CHAMP + FILTRE + Nb RESULTATS-->
                         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                         <h2>En plein centre ville ou en pleine nature</h2>
 
-                        <div id="champ"> <!--N°1-->
-                            <div id="pointeur"><i class="fas fa-map-marker-alt"></i></div>
+                        <div id="search_bar"> 
+                            <div id="marker"><i class="fas fa-map-marker-alt"></i></div>
                             
-                            <form method="post" action="traitement.php">
+                            <form class="search_classic" method="post" action="traitement.php">
                                 <input type="search" name="Rechercher" id="Rechercher" placeholder="Marseille, France"/>
                                     <label for="Rechercher"></label><input type="submit" value="Rechercher"/>
                             </form>
+
+                            <form class="search_mobile" method="post" action="traitement.php">
+                                <input type="search" name="Rechercher" id="Rechercher" placeholder="Marseille, France"/>
+                                    <label for="Rechercher"></label><a class="submit_logo" href="https://www.google.com/" target="_blank"><i class="fas fa-search"></i></a>
+                            </form>
+
                         </div>
 
-                        <div id="filtres">
+                        <div id="filter">
                             <div id=title>Filtres</div>
                             <div id="economique"><i class="fas fa-money-bill-wave"></i>Economique</div> 
                             <div id="familial"><i class="fas fa-child"></i>Familial</div> 
@@ -57,14 +63,14 @@
                     </div> <!--fermeture DIV Recherche-->
 
                     
-                    <section id="tous_logements">
+                    <section id="main_rooms">
 
-                        <div id="hebergements"> 
+                        <div id="classic_rooms"> 
                             <div><h3>Hébergements à Marseille</h3></div>
                         
-                            <div class="hotel">
+                            <div class="hostel">
                                 
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure>
                                             <img src="images/aub_cannebiere.jpg" alt="Auberge La Cannebière">
@@ -81,7 +87,7 @@
                                     </a>
                                 </div>
 
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure>
                                             <img src="images/hotel_port.jpg" alt="Hôtel du Port">
@@ -98,7 +104,7 @@
                                     </a>
                                 </div>
 
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure>
                                             <img src="images/hot_mouettes.jpg" alt="Hôtel Les Mouettes">
@@ -115,7 +121,7 @@
                                     </a>
                                 </div>
                                  
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure>
                                             <img src="images/hot_mer.jpg" alt="Hôtel de la mer">
@@ -132,7 +138,7 @@
                                     </a>
                                 </div>
                                                             
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure>
                                             <img src="images/aub_panier.jpg" alt="Auberge Le Panier">
@@ -149,7 +155,7 @@
                                     </a>
                                 </div>
 
-                                <div class="chambre">
+                                <div class="room">
                                     <a href="">
                                         <figure class="hot_amina">
                                             <img src="images/hot_amina.jpg" alt="Hôtel Chez Amina">
@@ -229,12 +235,12 @@
                         </aside>
                     </section>
 
-                    <section id="activity">
-                        <div><h3>Activités à Marseille</h3></div>
+                    <section id="activity_section">
+                        <h3>Activités à Marseille</h3>
 
-                        <div class="activity_cards">
+                        <div class="activity_content">
                             
-                            <div class="column1"> 
+                            <div class="column_single"> 
                                 <a href="">
                                     <figure>    
                                         <img src="images/Vx_port.jpg" alt="Vieux Port">
@@ -245,8 +251,8 @@
                                 </a>
                             </div>
 
-                            <div class="column2">
-                                <div class="pomegues">
+                            <div class="column_double">
+                                <div class="fig_1">
                                     <a href="">    
                                         <figure>
                                             <img src="images/fort_pomègues.jpg" alt="Fort de Pomègues">
@@ -258,7 +264,7 @@
                                 </div>
                         
 
-                                <div class="frioul">
+                                <div class="fig_2">
                                     <a href="">
                                         <figure>
                                             <img src="images/frioul.jpg" alt="Îles du Frioul">
@@ -270,7 +276,7 @@
                                 </div>
                             </div>
 
-                            <div class="column3">
+                            <div class="column_single">
                                 <a href="">
                                     <figure>
                                         <img src="images/calanques.jpg" alt="Parc National des Calanques">
@@ -281,8 +287,8 @@
                                 </a>
                             </div>
 
-                            <div class="column4">
-                                <div class="garde">
+                            <div class="column_double">
+                                <div class="fig_1">
                                     <a href="">
                                         <figure>
                                             <img src="images/nd_garde.jpg" alt="Notre-Dame-de-la-Garde">
@@ -293,7 +299,7 @@
                                     </a>
                                 </div>
 
-                                <div class="longchamp">
+                                <div class="fig_2">
                                     <a href="#">
                                         <figure>
                                             <img src="images/longchamp.jpg" alt="Parc Longchamp">

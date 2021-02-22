@@ -1,0 +1,14 @@
+<form class="search_classic" method="post" action="#">
+						<p>
+							<label><i class="fas fa-map-marker-alt"></i></label>
+							<input class="recherche" type="search" name="search" placeholder="Marseille, France">
+							<input class="submit" type="submit" name="Rechercher" value="Rechercher">
+						</p>
+					</form>
+					<form class="search_mobile" method="post" action="#">
+						<p>
+							<label><i class="fas fa-map-marker-alt"></i></label>
+							<input class="recherche" type="search" name="search" placeholder="Marseille, France">
+							<a class="submit_logo" href="https://www.google.com/" target="_blank"><i class="fas fa-search"></i></a>
+						</p>
+					</form>
