@@ -21,6 +21,7 @@ body {
 a {
     text-decoration: none;
     color: black; 
+    box-sizing: content-box;
 }
 
 /* Mise en forme générique 
@@ -235,8 +236,6 @@ h2 {
 
 #main_rooms {
     width: 100%;
-    /* height: auto; */
-    min-width: 500px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 3%;
@@ -267,7 +266,7 @@ h3 { /*titre Hébergements Marseille + ASIDE */
    justify-content: space-between;
 }
 
-.hostel {
+.classic_content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -299,7 +298,7 @@ h3 { /*titre Hébergements Marseille + ASIDE */
 }
 
 .room figcaption {
-    padding-left: 1em;
+    padding-left: 10px;
     text-align: left;
     line-height: 0.2rem;
 }
@@ -342,134 +341,130 @@ h3 { /*titre Hébergements Marseille + ASIDE */
 
 /*------------------------------------------------------ ASIDE */
 aside {
-    width: 33%; 
-    /* height: auto; */
-    background-color: #F2F2F2;
+    width: 33%;
+    background-color: #f2f2f2;
     border-radius: 15px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-    /* align-content: center; */
-    /* margin: 0;
-    padding: 0; */
 }
 
-aside > div:first-child {
-    position: relative;
-    width: 100%;
-}  
-    
-aside > div .fa-chart-line {
-    position: absolute;
-    top: 25px; 
-    right: 20px;
-    font-size: 1.5em;
+
+/*-------------------------------------- ASIDE Titre et icone -------------------------*/
+aside div:first-child {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* Mise en forme de chaque carte : une DIV > FIGURE > IMG > FIGCAPTION > titre + p + 5 icons star*/
-.pop_cards {
-    width: 100%;
+aside i {
+    padding-top: 25px;
+    padding-right: 15px;
+}
+
+/*-------------------------------------- ASIDE contenu -------------------------*/
+
+.pop_content {
+    width: 100%; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-/* aside a {
-    width: 90%;
-} */
 
-aside figure {
-    background-color: white;
-    box-sizing: border-box;
-    width: 90%;
-    height: 120px;
-    /* margin: 0 0 2em 0.5em; */
+.pop_content a {
+    width: 80%;
+    height: 30%;
+}
+
+.pop_content figure {
     display: flex;
+    justify-content: flex-start;
     margin-bottom: 10px;
 }
 
-aside img {
-    display: flex;
-    justify-content: flex-start;
-    width: 40%;  
-    /* min-height: 93%; */
+.pop_content img {
+    width: 40%;
     border-radius: 15px 0 0 15px;
-    /* padding : 3px 15px 3px 3px;  */
     object-fit: cover;
 }
 
-aside figcaption {
+.pop_content figcaption {
+    width: 60%;
+    padding-left: 5px; 
+    background-color: white;
+    border-radius: 0 15px 15px 0;
     line-height: 1em;
 }
 
 aside h4 {
     font-size: 0.8em;
-    padding-bottom: 0;
-    padding-top: 8px;
-    margin: 0;
+    font-weight: bold;
 }
-    
-aside p { 
+
+aside p {
     font-size: 0.9em;
 }
 
-aside i { 
+aside p i {
+    color: #0065FC;
     font-size: 0.9em;
+    padding-right: 2px;
 }
 
-aside .fa-star { 
-    color:#0065FC; 
-    padding-top: 5px;
-    padding-bottom: 0; 
-}
 
-.coeur_eau i:nth-child(5), .bleu_blanc i:nth-child(5) {
-    color: #f2f2f2;
-}
-
-/* Fin cartes pop */
-/* ------------------------------------Fin Section HERBEGEMENTS -------------------------------------------- */
+/* ------------------------------------Fin Section MAIN_ROOMS -------------------------------------------- */
 
 /* -------------------------------------- SECTION ACTIVITES --------------------------------------------------*/
 
 #activity_section {
-    width: 100%; 
+    width: 100%;
 }
 
 .activity_content {
-    height: 100%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .column_single {
-    box-sizing: border-box;
     width: 23%;
-    height: 100%;
-    max-height: 
 }
 
 .column_double {
-    box-sizing: border-box;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
     width: 23%;
-    height: 100%;
 }
 
-.fig_1 {
-    padding-bottom: 10px;
-}
-
-img {
-    border-radius: 15px 15px 0 0;
+.column_single figure {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+}
+
+.column_single img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.column_double figure {
+    width: 100%;
+    height: 100%;
+}
+
+.column_double img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.activity_content img {
+    border-radius: 15px 15px 0 0;
 }
 
 .activity_content h4 {
     font-size: 0.8em;
-    padding-left: 10px;
+    margin: 5px 0 5px 10px;
 }
+
 /* ------------------------------------ Fin section ACTIVITES ----------------------------------------> 
 
 /*footer*/
@@ -491,6 +486,8 @@ footer h5 {
 }
 
 
+
+
 /*_______________________________________________________________________________________________________*/
 
 /* -------------------------------RESPONSIVE width-device < 767px ------------------------------*/
@@ -498,17 +495,18 @@ footer h5 {
 
 
 @media all and (max-width: 767px) 
+
 {
     body {
         width: 100%;
         display: block;
-        margin: auto;
-        overflow-x: hidden;
+        /* margin: auto; */
+        
     } 
 
     #block_page {
         width: 100%;
-        margin: auto;
+        overflow-x: hidden;
     } 
 
     h1, h2, h3 {
@@ -516,7 +514,7 @@ footer h5 {
     }
 /* --------------------------- header < 767px---------------------------------*/
     header {
-        width: 420px;
+        width: 100%;
         margin: 10px 5px 10px 5px;
         height: auto;
         display: flex;
@@ -573,7 +571,8 @@ footer h5 {
     }
 
     .search_area {
-        width: 420px;
+        width: 100%;
+        margin-left: 5px;
     }
 
     #search_bar {
@@ -646,8 +645,8 @@ footer h5 {
         align-items: center;
     }
 
-    .hostel {
-        width: 100%;
+    .classic_content {
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -656,12 +655,10 @@ footer h5 {
 
     .room {
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
     }
 
-    /* #hebergements h3 {
-        margin: 10px;
-    } */
+
 
    /* --------------------------- 2/ ASIDE POPULAIRE < 767px -------------------------------*/
     /* monte au dessus des 6 hébergements classiques
@@ -675,39 +672,40 @@ footer h5 {
 
     
     aside img {
-        max-width: 110px;
+        width: 50%;
         object-fit: cover;
-    }
-
-    .pop_cards {
-        justify-content: center;
     }
 
     /* --------------------------- 3/ ACTIVITES < 767px -----------------------------------*/
     /* Se positionne en colonnes, photos en paysage et figcaption dessous */
 
-    #activity {
+    .activity_content {
         width: 100%;
-        height: 1000px;
-    }
-    
-    .activity_cards {
-        width: 100%;
-        height: 250px; 
-        flex-direction: column;
-        justify-content: space-between;
-    
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-around; 
+        align-items: center;
     } 
 
-    .column1, .column2, .column3, .column4 {
-        width: 100%;
-        max-height: 90px;
+    .column_single, .column_double {
+        width: 90%;
     }
+
+    .activity_content figure {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .activity_content img {
+        width: 100%;
+        height: 150px;
+    }
+
 
 /* ---------------------------------- FOOTER < 767px--------------------------------------*/
 
     footer {
-        width: 420px;
+        width: 100%;
         height: auto;
         margin-top: 50px;
         display: flex; 
@@ -720,6 +718,11 @@ footer h5 {
     }
 }
 /* fermeture width-device > 767px */
+
+
+
+
+
 
 /* _______________________________________________________________________________________________________
 
@@ -795,26 +798,44 @@ footer h5 {
         margin-bottom: 15px; 
     }
 
-    aside a{
+    aside a {
         width: 70%;
         justify-content: center;
-    }
-
-    aside figure {
-        object-fit: fill;
     }
 
     /* --------------------------- 3/ ACTIVITES <from 768px to 1024px> -----------------((----------------*/
     /* Se positionne en colonnes, photos en paysage et figcaption dessous */
 
-    .activity_cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+    .activity_content {
         width: 100%;
-        height: auto; 
+        display: flex;
+        flex-flow: row wrap; 
+        justify-content: space-around; 
+        align-items: center;
     } 
+
+    .column_single { 
+        width: 50%;
+        height: 40%;
+        
+    }
+
+    .column_double {
+        width: 50%;
+        height: 50%;
+    }
+
+    .activity_content figure {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .column_double img {
+        height: 100%;
+    }
+
+
+    
 
  /* ---------------------------------- FOOTER <from 768px to 1024px> --------------------------------------*/
 
