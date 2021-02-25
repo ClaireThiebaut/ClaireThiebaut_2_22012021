@@ -119,7 +119,7 @@ h2 {
     margin-left: 6px;
 }
 
-.search_classic input[type=search] {
+.search input[type=search] {
     width: 400px;
     height: 36px;
     padding: 8px 0 8px 8px;
@@ -128,7 +128,7 @@ h2 {
     font-size: 1em;
 }
 
-.search_classic input[type=submit] {
+.search button {
     width: 120px;
     height: 36px;
     padding: 8px 8px 8px 8px;
@@ -140,13 +140,17 @@ h2 {
     color: white; 
 }
 
-.search_mobile input[type=search] {
+.submit_logo {
     display: none;
 }
 
-.search_mobile i {
+/* .search_mobile input[type=search] {
     display: none;
 }
+
+.search_mobile input[type=submit_logo], .search_mobile i {
+    display: none;
+} */
 
 #filter {
     margin-top: 2%;
@@ -272,12 +276,14 @@ h3 { /*titre Hébergements Marseille + ASIDE */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    
 }
 
 /* Mise en forme de chaque carte : une DIV > FIGURE > IMG > FIGCAPTION > titre + p + 5 icons star  */
 .room {
-    max-width: 30%;
+    width: 30%;
     margin-bottom: 10px;
+    -moz-padding: 20px;
 }    
 
 .room figure {
@@ -408,6 +414,10 @@ aside p i {
     padding-right: 2px;
 }
 
+.coeur_eau i:last-child, .bleu_blanc i:last-child {
+    color: #f2f2f2;
+}
+
 
 /* ------------------------------------Fin Section MAIN_ROOMS -------------------------------------------- */
 
@@ -452,7 +462,7 @@ aside p i {
 
 .column_double img {
     width: 100%;
-    height: 80%;
+    height: 70%;
     object-fit: cover;
 }
 
@@ -501,7 +511,6 @@ footer h5 {
         width: 100%;
         display: block;
         /* margin: auto; */
-        
     } 
 
     #block_page {
@@ -514,12 +523,8 @@ footer h5 {
     }
 /* --------------------------- header < 767px---------------------------------*/
     header {
-        width: 100%;
-        margin: 10px 5px 10px 5px;
-        height: auto;
-        display: flex;
+        width: 95%;
         flex-wrap: wrap;
-        justify-content: space-between;
     }
     
     #logo img {
@@ -530,16 +535,17 @@ footer h5 {
     }
     
     .navbar {
-        display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
-        width: 100%;        
+        width: 100%;   
     }
+        
 
     .sign_in {
         order: 1;
         font-weight: bold;
         color: #0065fc; 
+        margin-top: 0;
     }
         
     nav {
@@ -549,8 +555,10 @@ footer h5 {
 
     ul {
         list-style-type: none;
+        justify-content: space-around;
         padding-bottom: 5px;
         border-bottom: solid 2px #F2F2F2;
+        z-index: 0;
     }
     
     nav li {
@@ -560,14 +568,22 @@ footer h5 {
         padding-bottom: 20px;
         font-weight: bold;
         
-        z-index: 0;
     }
     
     li span { 
         border-top: none;
-        border-bottom:#0065FC;
+        padding-bottom: 25px;
+        border-bottom: solid 2px #0065FC;
         color: #0065FC;
         z-index: 1;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.1em;
     }
 
     .search_area {
@@ -575,32 +591,30 @@ footer h5 {
         margin-left: 5px;
     }
 
-    #search_bar {
-        margin-bottom: 20px;
+    .search input[type=search] {
+        width: 200px;
     }
 
-    .search_classic input[type=search] {
-        width: 300px;
-        height: 36px;
-        /* padding: 8px 0 8px 8px; */
-        border: solid 2px #F2F2F2; 
-    } 
-    
-    .search_classic input[type=submit] {
+    .button {
         display: none;
     }
-   
+
     .submit_logo {
-        width: 20px;
+        display: inline;
+        width: 30px;
         height: 36px;
         padding: 8px 8px 8px 8px;
         background-color: #0065FC;
         border: none;
         border-radius: 0 10px 10px 0;
         font-weight: bold;
-        color: white;
+        font-size: 1em;
+        color: white; 
     }
-
+   
+    #search_bar {
+        margin-bottom: 20px;
+    }
     
     /* ---------------------------DIV Recherche < 767px---------------------------------*/
 

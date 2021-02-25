@@ -7,6 +7,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com">
                 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="style_reservia.css"/>
+            <link rel="icon" type="image/png" sizes="16x16" href="images/logo/favicon.png">
             <script src="https://kit.fontawesome.com/56cdae3e67.js" crossorigin="anonymous"></script>
             <title>Reservia</title>
         </head>
@@ -39,14 +40,17 @@
                         <div id="search_bar"> 
                             <div id="marker"><i class="fas fa-map-marker-alt"></i></div>
                             
-                            <form class="search_classic" method="post" action="traitement.php">
-                                <input type="search" name="Rechercher" id="Rechercher" placeholder="Marseille, France"/>
-                                    <label for="Rechercher"></label><input type="submit" value="Rechercher"/>
-                            </form>
-
-                            <form class="search_mobile" method="post" action="traitement.php">
-                                <input type="search" name="Rechercher" id="Rechercher_mobile" placeholder="Marseille, France"/>
-                                    <label for="Rechercher"></label><a class="submit_logo" href="https://www.google.com/" target="_blank"><i class="fas fa-search"></i></a>
+                            <form class="search" method="post" action="traitement.php">
+                                <input type="search" name="Rechercher" id="Rechercher" value="Marseille, France"/>
+                                    <label for="Rechercher"></label> <!--<input type="submit"/>-->
+                                
+                                    <span class="button">
+                                        <button class="search" type="button">Rechercher</button>
+                                    </span>
+                                
+                                    <span class="submit_logo">
+                                        <i class="fas fa-search"></i>
+                                    </span>
                             </form>
 
                         </div>
