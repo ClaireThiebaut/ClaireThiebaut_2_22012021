@@ -14,7 +14,6 @@ body {
 #block_page {
     font-family: 'raleway', arial, sans-serif;
     width: 90%;
-    /* font-size: 1em; */
     margin: auto; 
 }
 
@@ -25,11 +24,13 @@ a {
 }
 
 /* Mise en forme générique 
+FONT-SIZES :
 h1 : 1.8em
 h2 : 1.3em
-h3 : 1rem
-h4 : 0.8em
+h3 : 1,2em
+h4 : 0.8em (sauf pour ACTIVITES : 0.9em)
 texte : 1em
+Room p et i : 0.9em
 
 COLORS
 bleu foncé : #0065FC 
@@ -72,7 +73,6 @@ li:hover {
 
 .sign_in {
     display: flex;
-    flex-direction: row;
     margin-top: 16px; 
 }
     
@@ -101,6 +101,8 @@ h2 {
     margin-top: 0;
 }
 
+/*------------------------------------SEARCH */
+
 #search_bar {
     width: 100%;
     display: flex;
@@ -108,11 +110,11 @@ h2 {
 }
 
 #marker {
-    width : 20px;
+    width: 20px;
     height: 20px;
     padding: 8px;
     background-color: #F2F2F2;
-    border-radius: 10px 0 0 10px 
+    border-radius: 10px 0 0 10px;
 }
 
 #marker i {
@@ -143,14 +145,7 @@ h2 {
 .submit_logo {
     display: none;
 }
-
-/* .search_mobile input[type=search] {
-    display: none;
-}
-
-.search_mobile input[type=submit_logo], .search_mobile i {
-    display: none;
-} */
+/* ---------------------------------------- FILTRES */
 
 #filter {
     margin-top: 2%;
@@ -215,13 +210,16 @@ h2 {
 }
         
 #animaux:hover {
-    background-color: #DEEBFF; color: #0065FC; }
+    background-color: #DEEBFF; color: #0065FC; 
+}
 
-.search_area p { /* PARAGRAPHE : plus de 500 logements ..... */
-    font-size: 1em;
+
+/* -------------------PARAGRAPHE : plus de 500 logements */    
+
+.search_area p { 
+    font-size: 0.8em;
     margin-top: 20px; margin-left: 3px;
-    display: flex;
-    flex-direction: row; 
+    display: flex; 
     align-items: center; 
 }
 
@@ -276,7 +274,6 @@ h3 { /*titre Hébergements Marseille + ASIDE */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    
 }
 
 /* Mise en forme de chaque carte : une DIV > FIGURE > IMG > FIGCAPTION > titre + p + 5 icons star  */
@@ -331,21 +328,19 @@ h3 { /*titre Hébergements Marseille + ASIDE */
 .cannebiere i:nth-child(5), .mouettes i:nth-child(5), .mer i:nth-child(5), .panier i:nth-child(5) {
     color:#f2f2f2;
 }
-/* Fin cartes HOTEL*/
 
-
-/* mention AFFICHER PLUS */
+/* ----------------------------------------- mention AFFICHER PLUS */
 .more { 
     font-weight: bold;
-    padding-left: 1em;
-    padding-bottom: 1em;
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 
-/*---------------------------------------- Fin DIV  ID="CLASSIC_ROOMS"  */
+/*---------------------------------------- Fin DIV  ID="CLASSIC_ROOMS" */
 
 
 
-/*------------------------------------------------------ ASIDE */
+/*---------------------------------------------- ASIDE ----------------------------------------------*/
 aside {
     width: 33%;
     background-color: #f2f2f2;
@@ -353,7 +348,7 @@ aside {
 }
 
 
-/*-------------------------------------- ASIDE Titre et icone -------------------------*/
+/*-------------------------------------- ASIDE Titre et icone */
 aside div:first-child {
     display: flex;
     justify-content: space-between;
@@ -364,7 +359,7 @@ aside i {
     padding-right: 15px;
 }
 
-/*-------------------------------------- ASIDE contenu -------------------------*/
+/*-------------------------------------- ASIDE contenu*/
 
 .pop_content {
     width: 100%; 
@@ -419,9 +414,11 @@ aside p i {
 }
 
 
-/* ------------------------------------Fin Section MAIN_ROOMS -------------------------------------------- */
+/* ------------------------------------Fin SECTION MAIN_ROOMS -------------------------------------------- */
 
-/* -------------------------------------- SECTION ACTIVITES --------------------------------------------------*/
+
+
+/* -------------------------------------- SECTION ACTIVITY --------------------------------------------------*/
 
 #activity_section {
     width: 100%;
@@ -475,9 +472,9 @@ aside p i {
     margin: 5px 0 5px 10px;
 }
 
-/* ------------------------------------ Fin section ACTIVITES ----------------------------------------> 
+/* ------------------------------------ Fin section ACTIVITES ----------------------------------------*/
 
-/*footer*/
+/*------------------------------------------- FOOTER -------------------------------------------------*/
 
 footer {
     width: 100%;
@@ -510,7 +507,6 @@ footer h5 {
     body {
         width: 100%;
         display: block;
-        /* margin: auto; */
     } 
 
     #block_page {
@@ -521,6 +517,7 @@ footer h5 {
     h1, h2, h3 {
         margin-left: 5px;
     }
+
 /* --------------------------- header < 767px---------------------------------*/
     header {
         width: 95%;
@@ -731,7 +728,7 @@ footer h5 {
         line-height: 10px;
     }
 }
-/* fermeture width-device > 767px */
+/* --------------------------------- fermeture width-device > 767px */
 
 
 
@@ -825,12 +822,11 @@ footer h5 {
         display: flex;
         flex-flow: row wrap; 
         justify-content: space-around; 
-        align-items: center;
     } 
 
     .column_single { 
         width: 50%;
-        height: 40%;
+        height: 35%;
         
     }
 
@@ -847,6 +843,7 @@ footer h5 {
     .column_double img {
         height: 100%;
     }
+
 
 
     
