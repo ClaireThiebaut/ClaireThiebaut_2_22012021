@@ -43,8 +43,12 @@ gris : #F2F2F2*/
 /*---------------------------------------- HEADER ---------------------------------------*/
 header {
     width: 100%;
-    display: flex;
-    justify-content: space-between; 
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+#logo {
+    flex-grow: 1;
 }
 
 #logo img {
@@ -55,25 +59,34 @@ header {
 
 .navbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-nav ul {
+.nav {
+    margin-right: 15px;
+}
+
+/* nav ul {
     list-style-type: none;
     display: flex;
 }
 
 nav li {
     margin-right: 15px; 
-}
+} */
 
-li:hover {
+.overline {
     border-top: 3px solid #0065fc; 
     padding-top: 15%;
 }
 
 .sign_in {
     display: flex;
-    margin-top: 16px; 
+    justify-content: center;
+    align-items: center;
+
 }
     
 .sign_in a { 
@@ -524,20 +537,16 @@ footer h5 {
         flex-wrap: wrap;
     }
     
+    #logo {
+        width: 200px;
+    }
+
     #logo img {
         width: 120px;
         height: auto;
-        margin-top: 20px;
         object-fit: cover;
     }
     
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        width: 100%;   
-    }
-        
-
     .sign_in {
         order: 1;
         font-weight: bold;
@@ -545,26 +554,36 @@ footer h5 {
         margin-top: 0;
     }
         
-    nav {
+    .navbar {
         order: 2;
         width: 100%;
+        justify-content: space-around;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #F2F2F2;
     }
 
-    ul {
+    .overline {
+        border-top: none;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    /* ul {
         list-style-type: none;
         justify-content: space-around;
         padding-bottom: 5px;
         border-bottom: solid 2px #F2F2F2;
         z-index: 0;
-    }
+    } */
     
-    nav li {
+
+    /* nav li {
         width: 50%;
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
         font-weight: bold;
-        
     }
     
     li span { 
@@ -573,7 +592,7 @@ footer h5 {
         border-bottom: solid 2px #0065FC;
         color: #0065FC;
         z-index: 1;
-    }
+    } */
 
     h1 {
         font-size: 1.5em;
